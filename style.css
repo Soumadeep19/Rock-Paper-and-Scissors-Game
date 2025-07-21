@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    border: 0px;
+}
+
+/* FOR BACKGROUND VIDEO */
+
+#myVideo {
+  position: fixed;     /*To fix the video to the entire screen and keep it stuck in the   background, regardless of scrolling OR OTHER CONTENT */
+  top: 0;
+  left: 0;
+  min-width: 100%;        /*the video should be at least as wide as the browser window (100% of the viewport width)*/
+  min-height: 100%;
+  z-index: -1;             /* ensures the video stays in the background. */
+  object-fit: cover;       /* makes the video fill the screen nicely. */
+  opacity: 75%;            /* optional:- for a faded background effect */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  z-index: 1;          /*  to stack the body content above the video (which has z-index: -1).If you skip this, sometimes the video may overlap or hide your UI unexpectedly.*/
+  font-family: Arial, sans-serif;
+  color: #090909;      /* depends on your video background */
+  position: relative;    /* creates a new positioning context */
+}
+
+
+
+
+h1{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 3rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    line-height: 4.4rem;
+    cursor:cell;
+}
+
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    margin-top: 50px;
+    
+}
+
+
+.choice {
+    height:165px;
+    width:165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%
+    
+}
+.choice:hover{
+    opacity: 65%;
+    background-color: rgb(0, 0, 0);
+   
+}
+
+
+
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* For score board of user and computer :- */
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    gap: 5rem;
+    margin-top: 8rem; 
+    cursor: grab;
+}
+
+
+/* For -> Start your move button */
+
+.msg-container{
+    gap: 5rem;
+    margin-top: 8rem;
+}
+
+#msg
+{
+    font-size: 1.5rem;
+    font-family:fantasy;
+    background-color:black;
+    color: white;
+    display:inline;
+    border-radius: 3rem;
+    padding:1rem;
+    cursor: none;
+}
+
+#msg:hover{
+    opacity: 75%;
+    color: rgb(45, 15, 236);
+    background-color: #fff;
+}
